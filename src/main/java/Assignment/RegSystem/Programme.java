@@ -14,17 +14,17 @@ public class Programme {
 	public Programme(String courseNme, ArrayList<Module> moduleList, LocalDate startD, LocalDate endD) {
 		
 		this.courseName = courseNme;
-		this.moduleList = new ArrayList<Module>();
+		this.moduleList = moduleList;
 		this.startDate = startD;
 		this.endDate = endD;
 	}
-	
+		
 	public void setCourseName(String courseNme) {
 		
 		this.courseName = courseNme;
 
 	}	
-	public void setModules(ArrayList<Module> moduleList) {
+	public void setModules(ArrayList moduleList) {
 		
 		this.moduleList = moduleList;
 
@@ -43,9 +43,11 @@ public class Programme {
 	
 	public ArrayList<Module> getModules() {
 		return moduleList;
-		
 	}
 	
+	public void addModule(Module module) {
+		moduleList.add(module);
+	}
 	public LocalDate getStartDate() {
 		return startDate;
 		
@@ -55,17 +57,18 @@ public class Programme {
 		return endDate;
 		
 	}
+   
 	public String toString() {
 		 String sentence = "Student Course Name: " + getCourseName() +
-				   "\nStudent Module: " + getModules() +
+				   "\nStudent Module: " + getModules()+
 				   "\nStudent Start Date: " + getStartDate() +
-				   "\nStudent End Date: " + getEndDate();				
+				   "\nStudent End Date: " + getEndDate()
+				   + "\n";				
 		return sentence;		
 	}
-	//Start and end dates should use Joda Time
-	//classes, which should be added as a project dependency
-    public static void main(String[] args) {
-    	Programme module = new Programme("Computer Science", null, null, null);
-        System.out.println(module);
-	}
+
+//	public static void main(String[] args) {
+//    	Programme programme = new Programme("Computer Science", null, new LocalDate(2017, 10, 02), new LocalDate(2018, 05, 12));
+//        System.out.println(programme);
+//	}
 }

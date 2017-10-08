@@ -2,11 +2,14 @@ package Assignment.RegSystem;
 
 import org.junit.Test;
 import junit.framework.TestCase;
+
+import static org.junit.Assert.*;
+
 import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
-public class studentTest extends TestCase {
+public class studentTest {
     public Student studentTest;
     private LocalDate dateB = new LocalDate(1996,07,16);
 	private DateTimeFormatter fmt = DateTimeFormat.forPattern("dd/MM/YYYY");
@@ -18,7 +21,7 @@ public class studentTest extends TestCase {
 	@Test
     public void testGetUsername()
     {
-		studentTest = new Student("Tobi Awoponle", 21, dateDOB,"14335486", null);
+		studentTest = new Student("Tobi Awoponle", 21, dateDOB,"14335486", "");
         String usernameRec = studentTest.getUsername();
 
         assertEquals(usernameExpected, usernameRec);
@@ -28,12 +31,13 @@ public class studentTest extends TestCase {
     @Test
     public void testToString()
     {
-		studentTest = new Student("Tobi Awoponle", 21, dateDOB,"14335486",null);
+		studentTest = new Student("Tobi Awoponle", 21, dateDOB,"14335486","");
         String StringExpected = "Student Name: Tobi Awoponle\n" + 
         		"Student Age: 21\n" + 
         		"Student DOB: 1996-07-16\n" + 
         		"Student ID: 14335486\n" + 
-        		"Student Username: " + usernameExpected;
+        		"Student Username: " + usernameExpected
+        		+ "\n";
         String stringRec = studentTest.toString();
 
         assertEquals(StringExpected, stringRec);
