@@ -16,8 +16,8 @@
 
 	<repositories>
 		<repository>
-			<id>jitpack.io</id>
-			<url>https://jitpack.io</url>
+			<id>RegSystem</id>
+			<url>>file:///C:/Dropbox/Public/RegSystem</url>
 		</repository>
 	</repositories>
 	<!-- <distributionManagement> <repository> <id>RegSystem</id> <url>file:///C:/Dropbox/Public/RegSystem</url> 
