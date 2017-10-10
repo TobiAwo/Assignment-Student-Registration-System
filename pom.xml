@@ -18,7 +18,7 @@
 		<repository>
 			<id>RegSystem</id>
 			 <name>RegSystem</name>
-			<url>C:\Users\Tobi\Documents\SoftEng\RegSystem</url>
+			<url>C:\Users\Tobi\Documents\SoftEng</url>
 		</repository>
 	</distributionManagement>
 	<!-- <distributionManagement> 
