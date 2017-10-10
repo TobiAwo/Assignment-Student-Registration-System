@@ -9,7 +9,7 @@ import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
-public class studentTest {
+public class studentTest extends TestCase{
     public Student studentTest;
     private LocalDate dateB = new LocalDate(1996,07,16);
 	private DateTimeFormatter fmt = DateTimeFormat.forPattern("dd/MM/YYYY");
