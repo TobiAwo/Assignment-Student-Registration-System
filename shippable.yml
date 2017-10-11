@@ -1,6 +1,7 @@
 language: java
 
 jdk:
- -oraclejdk1.8.0_144
+ - openjdk7
 
- mvn test
+after_success:
+- mvn test

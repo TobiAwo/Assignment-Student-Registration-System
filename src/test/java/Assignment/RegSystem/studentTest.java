@@ -9,40 +9,34 @@ import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
-public class studentTest extends TestCase{
-    public Student studentTest;
-    private LocalDate dateB = new LocalDate(1996,07,16);
+public class studentTest extends TestCase {
+	public Student studentTest;
+	private LocalDate dateB = new LocalDate(1996, 07, 16);
 	private DateTimeFormatter fmt = DateTimeFormat.forPattern("dd/MM/YYYY");
 	private String strDateOnly = fmt.print(dateB);
 	private LocalDate dateDOB = LocalDate.parse(strDateOnly, fmt);
-    private String usernameExpected = "tobiawoponle21";
+	private String usernameExpected = "tobiawoponle21";
 
-    //Test user name
+	// Test user name
 	@Test
-    public void testGetUsername()
-    {
-		studentTest = new Student("Tobi Awoponle", 21, dateDOB,"14335486", "");
-        String usernameRec = studentTest.getUsername();
+	public void testGetUsername() {
+		studentTest = new Student("Tobi Awoponle", 21, dateDOB, "14335486", "");
+		String usernameRec = studentTest.getUsername();
 
-        assertEquals(usernameExpected, usernameRec);
+		assertEquals(usernameExpected, usernameRec);
 
-    }
-	//Test user name in toString
-    @Test
-    public void testToString()
-    {
-		studentTest = new Student("Tobi Awoponle", 21, dateDOB,"14335486","");
-        String StringExpected = "Student Name: Tobi Awoponle\n" + 
-        		"Student Age: 21\n" + 
-        		"Student DOB: 1996-07-16\n" + 
-        		"Student ID: 14335486\n" + 
-        		"Student Username: " + usernameExpected
-        		+ "\n";
-        String stringRec = studentTest.toString();
+	}
 
-        assertEquals(StringExpected, stringRec);
+	// Test user name in toString
+	@Test
+	public void testToString() {
+		studentTest = new Student("Tobi Awoponle", 21, dateDOB, "14335486", "");
+		String StringExpected = "Student Name: Tobi Awoponle\n" + "Student Age: 21\n" + "Student DOB: 1996-07-16\n"
+				+ "Student ID: 14335486\n" + "Student Username: " + usernameExpected + "\n";
+		String stringRec = studentTest.toString();
 
-    }
+		assertEquals(StringExpected, stringRec);
 
+	}
 
 }
