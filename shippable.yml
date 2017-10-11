@@ -3,6 +3,4 @@ language: java
 jdk:
  -oraclejdk1.8.0_144
 
-build:
-  ci:
  mvn test
